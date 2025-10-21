@@ -2,7 +2,7 @@
 
 This is the template repository for the module 1 group assignment conducting a proteomic analysis of serum data to identify possible early detection biomarkers of autism spectrum disorder (ASD).
 
-Data for this assignment come from Hewitson *et al.* (2021). *Blood biomarker discovery for autism spectrum disorder: A proteomic analysis.* PLoS One. 2021 Feb 24;16(2):e0246581. doi: 10.1371/journal.pone.0246581. Data are publicly available and were accessed on August 19, 2022.
+Data for this assignment come from Hewitson *et al.* (2021). *Blood biomarker discovery for autism spectrum disorder: A proteomic analysis.* PLoS One. 2021 Feb 24;16(2):e0246581. doi: 10.1371/journal.pone.0246581. Data are publicly available and were initially accessed on August 19, 2022.
 
 ### Repository contents
 
@@ -22,13 +22,13 @@ Data for this assignment come from Hewitson *et al.* (2021). *Blood biomarker di
 
 ### Assignment tasks
 
-Most of the lifting for this analysis was already done in class. As noted, the published analysis excluded 192 unidentified variables which are included in our analysis by default. In addition, we made some simplifications for ease of presentation -- specifically, repeated RF fitting, forward selection in the logistic regression model, and repeated estimation of AUROC for the final classifier(s) were omitted. As such, our results will not match those in the paper exactly.
+Most of the heavy lifting for this analysis was already done in class. As noted, the published analysis excluded 192 unidentified variables which are included in our analysis by default. In addition, we made some simplifications for ease of presentation -- specifically, repeated RF fitting, forward selection in the logistic regression model, and repeated estimation of AUROC for the final classifier(s) were omitted. As such, our results will not match those in the paper exactly.
 
 Your group's task is to explore the sensitivity of the results to certain design choices in the methodology. Use the provided scripts `preprocessing.R` and `preliminary-analysis.R` as starting points to address the following questions:
 
-1.  What do you imagine is the reason for log-transforming the protein levels in `biomarker-raw.csv`? (Hint: look at the distribution of raw values for a sample of proteins.)
+1.  What do you imagine is the reason for log-transforming the protein levels in `biomarker-raw.csv`? (Hint: look at the distribution of the raw values for a sample of proteins.)
 
-2.  Temporarily remove the outlier trimming from preprocessing and do some exploratory analysis of outlying values. Are there specific *subjects* (not values) that seem to be outliers? If so, are outliers more frequent in one group or the other? (Hint: consider tabluating the number of outlying values per subject.)
+2.  Temporarily remove the outlier trimming from preprocessing and do some exploratory analysis of the outlying values. Are there specific *subjects* (not values) that seem to be outliers? If so, are outliers more frequent in one group or the other? (Hint: consider tabulating the number of outlying values per subject.)
 
 3.  Experiment with the following modifications:
 
